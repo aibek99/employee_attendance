@@ -11,7 +11,7 @@ import (
 )
 
 type App struct {
-	config interface{}
+	config *config.Config
 	db     interface{}
 	logger *slog.Logger
 }
