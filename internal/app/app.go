@@ -8,11 +8,13 @@ import (
 
 	"employee_attendance/internal/config"
 	"employee_attendance/internal/connection"
+
+	"github.com/jmoiron/sqlx"
 )
 
 type App struct {
 	config *config.Config
-	db     interface{}
+	db     *sqlx.DB
 	logger *slog.Logger
 }
 
